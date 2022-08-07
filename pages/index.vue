@@ -1,87 +1,55 @@
-<template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>
-            Vuetify is a progressive Material Design component framework for
-            Vue.js. It was designed to empower developers to create amazing
-            applications.
-          </p>
-          <p>
-            For more information on Vuetify, check out the
-            <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation </a
-            >.
-          </p>
-          <p>
-            If you have questions, please join the official
-            <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord </a
-            >.
-          </p>
-          <p>
-            Find a bug? Report it on the github
-            <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board </a
-            >.
-          </p>
-          <p>
-            Thank you for developing with Vuetify and I look forward to bringing
-            more exciting features in the future.
-          </p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3" />
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br />
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn color="primary" nuxt to="/inspire"> Continue </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+<template lang="pug">
+
+div(
+  class="text-center md:text-left"
+)
+  h1(
+    class=" \
+      px-2 font-serif font-thin tracking-wider text-center \
+      text-4xl md:text-4xl 2xl:text-6xl \
+      my-9 md:my-4 2xl:my-9 \
+    "
+  )
+    | Claude Kirke
+  section.container(
+    class=" \
+      font-mono \
+      py-24 p-6 space-y-6 \
+      3xl:text-2xl \
+    "
+  )
+    p
+      | Hi there! It&apos;s great to have you as a visitor here.
+    p
+      | I&apos;m excited for you to see it, but this website is still under
+      | construction. Please check back again in a few days,
+      | or send me an email at&#32;
+      a.border-b(href="mailto:claudekirke@gmail.com") claudekirke@gmail.com
+      | .
+    p
+      | Thank you!
+
+    div(
+      class=" \
+        flex justify-around mx-12 p-0 \
+        md:mx-[35%] 2xl:mx-[30%] 3xl:mx-96 \
+      "
+    )
+      img(
+        height="10rem"
+        src="~/assets/images/undraw_under_construction_46pa.svg"
+        alt="under construction"
+        title="Under construction! Check back again in a few days."
+      )
+
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'HomePage',
+  layout: 'default',
+  head: {
+    title: 'Home',
+  },
 }
 </script>

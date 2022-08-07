@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -6,15 +8,37 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - claudekirke',
-    title: 'claudekirke',
+    titleTemplate: '%s - Claude Kirke',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'I am a full-stack developer. Laravel, Vue, Linux, Docker, and Git are my best friends! Check out what I can do in my portfolio.' },
       { name: 'format-detection', content: 'telephone=no' },
+
+      // App Stuff ?
+      { name: 'msapplication-TileColor', content: '#da532c' },
+      { name: 'theme-color', content: '#ffffff' },
+
+      // Open Graph Meta
+      { name: 'og:title', content: 'Claude Kirke' },
+      { name: 'og:type', content: 'profile' },
+      { name: 'og:url', content: 'https://claudekirke.com/' },
+      { name: 'og:image', content: 'https://claudekirke.com/images/claude_kirke.jpg' },
+      { name: 'og:description', content: 'I am a full-stack developer. Laravel, Vue, Linux, Docker, and Git are my best friends! Check out what I can do in my portfolio.' },
+
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      // Icons
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico?v=1' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png?v=1' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png?v=1' },
+      { rel: 'apple-touch-icon', sizes: '120x120', href: '/apple-touch-icon.png?v=1' },
+      { rel: 'mask-icon',  color: '#5bbad5', href: '/safari-pinned-tab.svg?v=1' },
+      { rel: 'shortcut-icon', href: '/favicon.ico?v=1' },
+
+      // Manifest
+      { rel: 'manifesst', href: '/site.webmanifest?v=1' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -40,7 +64,17 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/tailwindcss',
   ],
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
+    config: {},
+    injectPosition: 0,
+    viewer: true,
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
@@ -76,4 +110,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  server: {
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'ssl/server.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'ssl/server.crt')),
+    },
+  },
 }
