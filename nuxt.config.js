@@ -36,6 +36,10 @@ export default {
       { rel: 'mask-icon',  color: '#5bbad5', href: '/safari-pinned-tab.svg?v=1' },
       { rel: 'shortcut-icon', href: '/favicon.ico?v=1' },
 
+      // Vuetify
+      { rel: 'preload', as: 'style', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap' },
+      { rel: 'preload', as: 'style', type: 'text/css', href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css' },
+
       // Manifest
       { rel: 'manifest', href: '/site.webmanifest?v=1' },
     ],
@@ -96,6 +100,7 @@ export default {
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    defaultAssets: false,
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: true,
