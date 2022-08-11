@@ -37,7 +37,7 @@ export default {
       { rel: 'shortcut-icon', href: '/favicon.ico?v=1' },
 
       // Manifest
-      { rel: 'manifesst', href: '/site.webmanifest?v=1' },
+      { rel: 'manifest', href: '/site.webmanifest?v=1' },
     ],
   },
 
