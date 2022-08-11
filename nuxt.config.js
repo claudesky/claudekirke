@@ -65,6 +65,7 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/gtm',
   ],
 
   tailwindcss: {
@@ -87,6 +88,10 @@ export default {
     manifest: {
       lang: 'en',
     },
+  },
+
+  gtm: {
+    id: 'G-L1BW55E00Q',
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
