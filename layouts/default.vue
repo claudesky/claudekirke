@@ -37,7 +37,7 @@ div(
       "
     )
       NuxtLink(
-        to="/tems"
+        to="/terms"
       ) Terms of Service
       NuxtLink(
         to="/privacy"
