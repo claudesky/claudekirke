@@ -28,11 +28,12 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
+    "@mdi/js": "^7.0.96",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/tailwindcss": "^5.3.1",
+    "@nuxtjs/tailwindcss": "^6",
     "@nuxtjs/vuetify": "^1.12.3",
     "@volar/pug-language-service": "^0.39.5",
     "eslint": "^8.4.1",
